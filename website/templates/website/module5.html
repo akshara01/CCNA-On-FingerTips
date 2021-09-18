@@ -1,0 +1,132 @@
+{% extends 'website/base.html'%}
+{% block title%} Module 5 {% endblock %}
+{% block module_5active %} active {% endblock module_5active %}
+{% load static %}
+{% block content %}
+<div class="container modules">
+    <div class='sidebar-content'>
+        <h1 class="text-center">Module 5 : Network Access</h1>
+        <div class="card-body p-0">
+            <div class="flex flex-column  mt-4 faq-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="accordion">
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-1">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.1' sub_modno='-' %}">
+                                            5.1 Define key security concepts (threats, vulnerabilities, exploits, and
+                                            mitigation techniques)
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.2' sub_modno='-' %}">
+                                            5.2 Describe security program elements (user awareness, training, and
+                                            physical access
+                                            control)
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.3' sub_modno='-' %}">
+                                            5.3 Configure device access control using local passwords
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.4' sub_modno='-' %}">
+                                            5.4 Describe security password policies elements, such as management,
+                                            complexity, and
+                                            password alternatives (multifactor authentication, certificates, and
+                                            biometrics)
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.5' sub_modno='-' %}">
+                                            5.5 Describe remote access and site-to-site VPNs
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.6' sub_modno='-' %}">
+                                            5.6  Configure and verify access control lists
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.7' sub_modno='-' %}">
+                                            5.7 Configure Layer 2 security features (DHCP snooping, dynamic ARP inspection, and port 
+                                            security)
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.8' sub_modno='-' %}">
+                                            5.8 Differentiate authentication, authorization, and accounting concepts
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.9' sub_modno='-' %}">
+                                            5.9 Describe wireless security protocols (WPA, WPA2, and WPA3)
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.10' sub_modno='-' %}">
+                                            5.10 Configure WLAN using WPA2 PSK using the GUI
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'website/base.html'%}
+{% block title%} Module 2 {% endblock %}
+{% block module_2active %} active {% endblock module_2active %}
+{% load static %}
+{% block content %}
+<div class="container modules">
+  <div class='sidebar-content'>
+    <h1 class="text-center">Module 2 : Network Access</h1>
+    <div class="card-body p-0">
+      <div class="flex flex-column  mt-4 faq-section">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="accordion">
+              <div class="card mb-4">
+                <div class="card-header" id="heading-1">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true"
+                      aria-controls="collapse-1">
+                      2.1 Configure and verify VLANs (normal range) spanning multiple switches
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                  <div class="card-body">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.1' sub_modno='a' %}">2.1 a Access Ports(data and voice)</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.1' sub_modno='b' %}">2.1 b Default VLAN</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.1' sub_modno='c' %}">2.1 c Connectivity</a><br>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false"
+                      aria-controls="collapse-2">
+                      2.2 Configure and verify interswitch connectivity
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                  <div class="card-body">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.2' sub_modno='a' %}">2.2 a Trunk Ports</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.2' sub_modno='b' %}">2.2 b 802.1Q</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.2' sub_modno='c' %}">2.2 c Native VLAN</a><br>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.3' sub_modno='-' %}">
+                      2.3 Configure and verify Layer 2 discovery protocols (Cisco Discovery Protocol and LLDP)
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.4' sub_modno='-' %}">
+                      2.4 Configure and verify (Layer 2/Layer 3) EtherChannel (LACP)
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false"
+                      aria-controls="collapse-2">
+                      2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol and
+                      identify basic operations
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapse-5" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                  <div class="card-body">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.5' sub_modno='a' %}">2.5 a Root port, root bridge (primary/secondary), and other port names</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.5' sub_modno='b' %}">2.5 b Port states(forwarding/blocking)</a><br>
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.5' sub_modno='c' %}">2.5 c PortFast benefits</a><br>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.6' sub_modno='-' %}">
+                      2.6 Compare Cisco Wireless Architectures and AP modes
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.7' sub_modno='-' %}">
+                      2.7 Describe physical infrastructure connections of WLAN components (AP, WLC,
+                      access/trunk ports, and LAG)
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.8' sub_modno='-' %}">
+                      2.8 Describe AP and WLC management access connections (Telnet, SSH, HTTP, HTTPS,
+                      console, and TACACS+/RADIUS)
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header" id="heading-2">
+                  <h5 class="mb-0">
+                    <a href="{% url 'dynamic' model_class='2' mod_no='2.9' sub_modno='-' %}">
+                      2.9 Configure the components of a wireless LAN access for client connectivity using GUI only
+                      such as WLAN creation, security settings, QoS profiles, and advanced WLAN settings
+                    </a>
+                  </h5>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

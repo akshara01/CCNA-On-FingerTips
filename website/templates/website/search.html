@@ -1,0 +1,17 @@
+{%extends 'website/base.html'%}
+{% block title%} Search {% endblock %} 
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class='sidebar-content'>
+        <h1 class="text-center">Search Results for : {{query}}</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                {% for i in module_details %}
+                <p>{{i.description|safe|linebreaks}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

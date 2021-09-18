@@ -1,0 +1,101 @@
+{%extends 'website/base.html'%}
+{% block title%} Home {% endblock %} 
+{% block homeactive %} active {% endblock homeactive %}
+{% load static %}
+{% block content %}
+
+{% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}<script>alert("{{ message }}")</script> {% endif %}
+        {% endfor %}
+{% endif %}
+
+<div class='sidebar-content'>
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'images/Learn CCNA.jpg' %}" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/Learn CCNA.jpg' %}" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'images/Learn CCNA.jpg' %}" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        
+        <br>   
+    </div>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">WHAT IS CCNA EXAM?</h5>
+                    <p class="card__apply">CCNA (Cisco Certified Network Associate) is an IT certification from Cisco.<br>
+                      -The CCNA is designed to validate your knowledge on fundamental networking concepts.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">WHY LEARN CCNA?</h5>
+                    <p class="card__apply">CCNA (Cisco Certified Network Associate) is an IT certification from Cisco.<br>
+                      -The CCNA is designed to validate your knowledge on fundamental networking concepts.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">WHAT YOU WILL LEARN?</h5>
+                    <p class="card__apply">CCNA (Cisco Certified Network Associate) is an IT certification from Cisco.<br>
+                      -The CCNA is designed to validate your knowledge on fundamental networking concepts.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">FUTURE SCOPE</h5>
+                    <p class="card__apply">CCNA (Cisco Certified Network Associate) is an IT certification from Cisco.<br>
+                      -The CCNA is designed to validate your knowledge on fundamental networking concepts.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">COURSE CONTENT MANUAL</h5>
+                    <p class="card__apply"><a class="card__link" href="#">DOWNLOAD<i class="fas fa-arrow-right"></i></a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card__title">CCNA SYLLABUS COVERED</h5>
+                    <p class="card__apply"> <a class="card__link" href="#">DOWNLOAD<i class="fas fa-arrow-right"></i></a></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

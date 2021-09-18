@@ -1,0 +1,59 @@
+{%extends 'website/base.html'%}
+{% block title%} Details {% endblock %} 
+{% load static %}
+{% block content %}
+<style>
+    .breadcrumb-item{
+        margin-left: 0px !important;
+    }
+    li{
+        margin-left: 30px !important;
+    }
+    p
+    {
+        margin-bottom: 0px;
+    }
+</style>
+<div class="container mt-5 dynamic-details">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          {% for i in details %}
+          {% if i.module_options == '1' %}
+            <li class="breadcrumb-item"><a href="{% url 'module' %}">{{i.module_numbering_title}}</a></li>
+            {% elif i.module_options == '2' %}
+            <li class="breadcrumb-item"><a href="{% url 'module2' %}">{{i.module_numbering_title}}</a></li>
+            {% elif i.module_options == '3' %}
+            <li class="breadcrumb-item"><a href="{% url 'module3' %}">{{i.module_numbering_title}}</a></li>
+            {% elif i.module_options == '4' %}
+            <li class="breadcrumb-item"><a href="{% url 'module4' %}">{{i.module_numbering_title}}</a></li>
+            {% elif i.module_options == '5' %}
+            <li class="breadcrumb-item"><a href="{% url 'module5' %}">{{i.module_numbering_title}}</a></li>
+            {% elif i.module_options == '6' %}
+            <li class="breadcrumb-item"><a href="{% url 'module6' %}">{{i.module_numbering_title}}</a></li>
+            {% else %}
+            {% endif %}
+            {% if i.module_subtitle_numbering == '-' %}
+            {% else %}
+            <li class="breadcrumb-item active" aria-current="page" style="background-color: #e9ecef ;">{{i.module_numbering_subtitle}}</li>
+            {% endif %}
+          {% endfor %}
+        </ol>
+    </nav>
+</div>
+{% for i in details %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 px-3">
+            {% if i.module_subtitle_numbering == '-' %}
+            <h2 class="text-center ">{{i.module_numbering}} {{i.module_numbering_title}}</h2>
+            {% else %}
+            <h2 class="text-center ">{{i.module_numbering}} {{i.module_subtitle_numbering}} {{i.module_numbering_subtitle}}</h2>
+            {% endif %}
+            <p>{{i.description|safe|linebreaks}}</p>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

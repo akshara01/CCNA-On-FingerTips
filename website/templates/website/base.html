@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+        <title>LEARN CCNA | {% block title%} {% endblock %}</title>
+        <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon" sizes="16x16 32x32">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+<body>
+    <div class="container-fluid">
+        <div class='sidebar w-100'>
+            <div class="sidebar-nav">
+                <header>
+                    <a href="#!" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <a href="#" class="brand-logo">
+                       <img src="{% static 'images/logo2.png' %}">
+                    </a>
+                </header>
+                <nav class="sidebar-nav-list">
+                    <a href="{% url 'index' %}"  class="sidebar-nav-item {% block homeactive %} {% endblock homeactive %}">
+                        Home
+                    </a>
+                    <a href="{% url 'module' %}" class="sidebar-nav-item {% block module_1active %} {% endblock module_1active %}">
+                      Module 1
+                     </a>
+                     <a href="{% url 'module2' %}" class="sidebar-nav-item {% block module_2active %} {% endblock module_2active %}">
+                       Module 2
+                      </a>
+                      <a href="{% url 'module3' %}" class="sidebar-nav-item {% block module_3active %} {% endblock module_3active %}">
+                       Module 3
+                      </a>
+                      <a href="{% url 'module4' %}" class="sidebar-nav-item {% block module_4active %} {% endblock module_4active %}">
+                       Module 4
+                      </a> 
+                      <a href="{% url 'module5' %}" class="sidebar-nav-item {% block module_5active %} {% endblock module_5active %}">
+                       Module 5
+                      </a>
+                      <a href="{% url 'module6' %}" class="sidebar-nav-item {% block module_6active %} {% endblock module_6active %}">
+                        Module 6
+                       </a>
+                    <a href="#" class="sidebar-nav-item">About</a>
+                    <a href="#" class="sidebar-nav-item">Contact</a>
+                   
+                </nav>
+            </div>
+            <div class='sidebar-app w-100'>
+                <header class='sidebar-toolbar'>
+                    <a href="#!" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <div>
+                        <div class="search"> 
+                        <form action="{% url 'search' %}" method="GET">
+                            <input type="text" class="search-input" placeholder="Search..." name="query" id="query">
+                            <button type="submit" class="btn search-icon"> <i class="fa fa-search"></i> </button>
+                        </form>
+                    </div>
+                    </div>
+                </header>     
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+   
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
