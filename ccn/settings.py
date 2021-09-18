@@ -25,7 +25,7 @@ SECRET_KEY = 'py!g=d%$ks@%ajn(=!8#aw6mkd$_zu29=lq*bb!g^=i%x)no#k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ccna-on-fingertips.herokuapp.com']
 
 
 # Application definition
