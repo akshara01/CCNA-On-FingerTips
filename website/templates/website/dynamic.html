@@ -29,8 +29,8 @@
             <li class="breadcrumb-item"><a href="{% url 'module4' %}">{{i.module_numbering_title}}</a></li>
             {% elif i.module_options == '5' %}
             <li class="breadcrumb-item"><a href="{% url 'module5' %}">{{i.module_numbering_title}}</a></li>
-<!--             {% elif i.module_options == '6' %}
-            <li class="breadcrumb-item"><a href="{% url 'module6' %}">{{i.module_numbering_title}}</a></li> -->
+            {% elif i.module_options == '6' %}
+            <li class="breadcrumb-item"><a href="{% url 'module6' %}">{{i.module_numbering_title}}</a></li>
             {% else %}
             {% endif %}
             {% if i.module_subtitle_numbering == '-' %}
