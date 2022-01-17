@@ -80,11 +80,19 @@
                             <div class="card mb-4">
                                 <div class="card-header" id="heading-2">
                                     <h5 class="mb-0">
-                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.7' sub_modno='-' %}">
-                                            5.7 Configure Layer 2 security features (DHCP snooping, dynamic ARP inspection, and port 
-                                            security)
+                                        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-7"
+                                            aria-expanded="false" aria-controls="collapse-2">
+                                            5.7 Configure Layer 2 security features (DHCP snooping, dynamic ARP inspection, and port security)
                                         </a>
                                     </h5>
+                                </div>
+                                <div id="collapse-7" class="collapse" data-parent="#accordion"
+                                    aria-labelledby="heading-2">
+                                    <div class="card-body">
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.7' sub_modno='a' %}">3.4 a LAYER 2 Security Features - DHCP Snooping</a><br>
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.7' sub_modno='b' %}">3.4 b Layer 2 Security Features - Dynamic ARP Inspection</a><br>
+                                        <a href="{% url 'dynamic' model_class='5' mod_no='5.7' sub_modno='c' %}">3.4 c LAYER 2 SECURITY FEATURES - Port Security</a><br>                                        
+                                    </div>
                                 </div>
                             </div>
 
