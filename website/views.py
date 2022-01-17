@@ -41,6 +41,9 @@ def module5(request):
 def module6(request):
     return render(request,'website/module6.html')
 
+def about(request):
+    return render(request,'website/about.html')
+
 def search(request):
 
     query=request.GET['query']
