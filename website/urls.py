@@ -13,8 +13,6 @@ urlpatterns = [
     path('module4',views.module4,name = 'module4'),
     path('module5',views.module5,name = 'module5'),
     path('module6',views.module6,name = 'module6'),
-    path('module6',views.module6,name = 'module6'),
-    path('about',views.about,name = 'about'),
     path('search',views.search,name = 'search'),
     
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
